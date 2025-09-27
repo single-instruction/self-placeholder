@@ -1,0 +1,16 @@
+{
+  "name": "zkclob-verifier-contracts",
+  "description": "zkCLOB KYC Verifier using Self Protocol",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "clean": "rm -rf cache out",
+    "build": "forge build",
+    "test": "forge test",
+    "fmt": "forge fmt",
+    "lint": "forge fmt --check"
+  },
+  "dependencies": {
+    "@selfxyz/contracts": "^1.2.3"
+  }
+}
