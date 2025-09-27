@@ -14,15 +14,15 @@ contract DeployZKCLOBVerifier is Script {
         
         vm.startBroadcast(deployerPrivateKey);
         
-        string memory scope = "zkclob-kyc-verifier";
-        address hubAddress = block.chainid == 44787 ? CELO_SEPOLIA_HUB : CELO_MAINNET_HUB;
+        address hubAddress = block.chainid == 11142220 ? CELO_SEPOLIA_HUB : CELO_MAINNET_HUB;
         
-        ZKCLOBVerifier verifier = new ZKCLOBVerifier(hubAddress, scope);
+        ZKCLOBVerifier verifier = new ZKCLOBVerifier(hubAddress, "zkclob-kyc-verifier");
         
         vm.stopBroadcast();
         
         console.log("ZKCLOBVerifier deployed to:", address(verifier));
         console.log("Chain ID:", block.chainid);
         console.log("Hub Address:", hubAddress);
+        console.log("Scope:", verifier.scope());
     }
 }
