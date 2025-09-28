@@ -20,8 +20,6 @@ contract ZKCLOBVerifier is SelfVerificationRoot {
         bytes userData
     );
     
-    mapping(address => bool) public verifiedAddresses;
-    
     // * @dev Works only with set config id. WELP.
     bytes32 public verificationConfigId;
     address public owner;
@@ -66,9 +64,9 @@ contract ZKCLOBVerifier is SelfVerificationRoot {
         bytes memory userData
     ) internal override {
         require(verificationActive, "Verification paused");
-        require(!verifiedAddresses[msg.sender], "Address already verified");
+        // require(!verifiedAddresses[msg.sender], "Address already verified");
         
-        verifiedAddresses[msg.sender] = true;
+        // verifiedAddresses[msg.sender] = true;
         
         emit UserVerified(msg.sender, output, userData);
     }
@@ -99,9 +97,9 @@ contract ZKCLOBVerifier is SelfVerificationRoot {
      * @param user Address to check verification status
      * @return bool True if user is verified
      */
-    function isUserVerified(address user) public view returns (bool) {
-        return verifiedAddresses[user];
-    }
+    // function isUserVerified(address user) public view returns (bool) {
+    //     return verifiedAddresses[user];
+    // }
     
     /**
      * @notice Toggles verification active status (owner only)

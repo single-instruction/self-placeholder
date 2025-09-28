@@ -152,4 +152,37 @@ Compiling 1 files with Solc 0.8.28
     	Response: `OK`
     	GUID: `99064cf6d955c3af3b8c5af5078d8ac1372b323d68d7348d`
     	URL: https://celo-sepolia.blockscout.com/address/0x99064cf6d955c3af3b8c5af5078d8ac1372b323d
+
+    [~/dev/placeholder/self-placeholder] [main *] $  forge script script/DeployZKCLOBVerifier.s.sol --rpc-url celo-sepolia --private-key 0xf7a5dfc4053f4a9d68ccae7ba6cdc9973dc218f6ebdc394eefad83ec748f563d --broadcast --verify
+[⠊] Compiling...
+No files changed, compilation skipped
+Script ran successfully.
+
+== Logs ==
+  ZKCLOBVerifier deployed to: 0xCF4C5064162bC944781Cf36f75D037036c35665A
+  Chain ID: 11142220
+  Hub Address: 0x16ECBA51e18a4a7e61fdC417f0d47AFEeDfbed74
+  Scope: 2698112660279857690528718620296709221744894878524254270222958315554827872252
+
+## Setting up 1 EVM.
+
+==========================
+
+Chain 11142220
+
+Estimated gas price: 50.001 gwei
+
+Estimated total gas used for script: 1686146
+
+Estimated amount required: 0.084308986146 ETH
+
+==========================
+
+##### 11142220
+ [Success] Hash: 0xb6a155ce1d36430b38df3defa41db3f0372693db593b0a2552ee936ba90cc411
+Contract Address: 0xCF4C5064162bC944781Cf36f75D037036c35665A
+Block: 5743054
+Paid: 0.032427197036 ETH (1297036 gas * 25.001 gwei)
+
+Sequence #1 on 11142220 | Total Paid: 0.032427197036 ETH (1297036 gas * avg 25.001 gwei)
 ```
